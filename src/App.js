@@ -16,7 +16,7 @@ function App() {
     setErr(0)
     setEmoji("")
 
-    fetch('http://localhost:3001/')
+    fetch(process.env.REACT_APP_URL_API)
     .then(resp => resp.json())
     .then(infos => {
       setEmoji(infos.emojis)
