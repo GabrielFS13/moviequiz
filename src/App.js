@@ -5,6 +5,7 @@ function App() {
 
   const [emojis, setEmoji] = useState("")
   const [movieTitle, setMovie] = useState("")
+  const [movieImg, setMovieImg] = useState("")
   const [hints, setHints] = useState({})
   const [status, setStatus] = useState("")
   const [errCount, setErr] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       setEmoji(infos.emojis)
       setMovie(infos.answer)
       setHints(infos.hints)
+      setMovieImg(infos.poster)
       console.log(infos)
     })
     .catch(err => console.log(err))
@@ -61,7 +63,8 @@ function App() {
         </div>
         <div className='content'>
           <div className='emotes'>
-            {emojis ? emojis : "Buscando filme..."}
+            {status ? <img src={movieImg} alt={movieTitle} /> : emojis ? emojis : "Buscando filme..."}
+        
           </div>
           <div className='hints'>
             <h2>Cada tentativa falha disponibilizará uma dica.</h2>
@@ -71,7 +74,7 @@ function App() {
           </div>
           <div className='input'>
             <form onSubmit={(e) => verifica(e)}>
-              <input type="text" required minLength="3"/>
+              <input type="text" required minLength="3" placeholder='Seu palpite...'/>
               <button>Enviar</button>
             </form>
           </div>

@@ -41,6 +41,12 @@
     font-size: 2em;
 }
 
+.emotes img{
+    width: 125px;
+    height: 250px;
+    object-fit: contain;
+}
+
 .hints{
     display: flex;
     flex-direction: row;
