@@ -5,6 +5,7 @@ function App() {
 
   const [emojis, setEmoji] = useState("")
   const [movieTitle, setMovie] = useState("")
+  const [originalTitle, setOriginal] = useState("")
   const [movieImg, setMovieImg] = useState("")
   const [hints, setHints] = useState({})
   const [status, setStatus] = useState("")
@@ -22,6 +23,7 @@ function App() {
     .then(infos => {
       setEmoji(infos.emojis)
       setMovie(infos.answer)
+      setOriginal(infos.orignal)
       setHints(infos.hints)
       setMovieImg(infos.poster)
       console.log(infos)
@@ -38,8 +40,8 @@ function App() {
     e.preventDefault()
     const palpite = e.target[0].value
 
-    if(movieTitle.includes(palpite)){
-      setStatus(`Você Acertou!!! ${movieTitle}, indo pra próxima...`)
+    if(movieTitle.includes(palpite) || originalTitle.includes(palpite)){
+      setStatus(`Você Acertou!!! PT-BR: ${movieTitle} Original: ${originalTitle}, indo pra próxima...`)
       e.target[0].value = ''
       setVitoria(parseInt(vitorias)+1)
       setTimeout(pegaQuiz ,2500);
