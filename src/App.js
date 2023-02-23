@@ -23,7 +23,7 @@ function App() {
     .then(infos => {
       setEmoji(infos.emojis)
       setMovie(infos.answer)
-      setOriginal(infos.orignal)
+      setOriginal(infos.original)
       setHints(infos.hints)
       setMovieImg(infos.poster)
       console.log(infos)
