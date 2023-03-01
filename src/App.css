@@ -1,117 +1,124 @@
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
 .App{
-    width: 90vw;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+}
+main{
+    width: 800px;
+    background-color: #03588C;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
     display: grid;
     place-content: center;
 }
 
-.jogo{
-    width: 800px;
-    height: 80vh;
-    margin: 0 auto;
-    background-color:#8AA6A3;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.jogo div{
-    min-width: 100%;
-}
-
-.jogo h1{
-    width: 100%;
+.title{
+    width: 400px;
     text-align: center;
-    margin: 0;
-    padding: 0;
-}
-.jogo .answer{
-    height: 50px;
-}
-
-.jogo .emotes{
-    border-radius: 32px;
-    height: 250px;
+    font-size: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
 }
 
-.emotes img{
-    width: 125px;
-    height: 250px;
-    object-fit: contain;
-}
-
-.hints{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 1.2em;
-    padding: 30px;
-}
-
-.hints span{
-    width: 100%;
-    padding: 10px;
-    border-bottom: 1px solid #4C5958;
-}
-
-.hints .genre{
-    display: flex;
-    flex-direction: row;
-}
-.genre p{
-    padding: 2px 5px;
-}
-.input{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.input form{
-    margin: 10px;
-}
-
-.input form input, button{
-    padding: 15px;
+.title button{
     border-radius: 30px;
     border: none;
-    outline: none;
-    margin: 0 10px;
 }
 
+.emojis{
+    font-size: 30px;
+}
+.emojis img{
+    width: 50px;
+    height: 40px;
+}
+.jogo{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    position: relative;
+}
+
+.top_img{
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    background-color:#BF9780;
+}
+.bottom_img{
+    width: 50px;
+    height: 300px;
+    right: 0;
+    position: absolute;
+    background-color: #BF9780;
+}
+
+.img img{
+    width: 200px;
+    height: 300px;
+}
+
+.frm{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.frm input, button{
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.frm input{
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.frm button{
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
 button{
     cursor: pointer;
 }
 
-.status_count{
-    height: 50px;
+.streak{
+    width: 400px;
+    text-align: center;
+}
+
+.dicas{
+    width: 400px;
+    height: 100px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
-.win{
-    color: green;
-    font-weight: bold;
-}
-
-.defeat{
-    color: red;
-    font-weight: bold;
+.dicas span{
+    width: 100%;
+    text-align: center;
 }
 
 
-@media (max-width: 800px) {
-    .App .jogo{
-        width: 100%;
-        height: auto;
-
+@media (max-width: 900px){
+    main{
+        width: 400px;
     }
 }
+

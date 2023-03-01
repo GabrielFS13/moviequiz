@@ -1,0 +1,19 @@
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #012340;
+    color: white;
+}
+aside span{
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+aside span:hover{
+    border-bottom: solid 1px;
+
+}
