@@ -89,8 +89,10 @@ const Menu = ({setGen, gen}) =>{
         <aside className='generos_menu'>
             {generos.map((genero, i) =>{
                 return(
-                    genero.id ? gen === genero.id ? <span key={i} onClick={() => setGen(genero.id)} className="ativo">{genero.name}</span> : <span key={i} onClick={() => setGen(genero.id)}>{genero.name}</span>
-                    : <span key={i} onClick={() => setGen(genero.id)} className="ativo">{genero.name}</span>
+                    genero.name === "Aleatório" && !gen ? <span key={i} onClick={() => setGen(genero.id)} className="ativo">{genero.name}</span> 
+                    : gen === genero.id ? <span key={i} onClick={() => setGen(genero.id)} className="ativo">{genero.name}</span> 
+                    : <span key={i} onClick={() => setGen(genero.id)}>{genero.name}</span>
+                    
                 )
             })}
         </aside>
