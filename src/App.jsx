@@ -13,12 +13,17 @@ function App() {
   const [status, setStatus] = useState("")
   const [errCount, setErr] = useState(0)
   const [streak, setStreak] = useState(0)
+  const [errAnimation, setAnimation] = useState("")
+  const [congrats, setCongrats] = useState('')
 
     function pegaQuiz(genre = false){
         var conexao = ''
         setStatus('')
         setErr(0)
+        setAnimation('')
         setEmoji("")
+        setCongrats('') 
+        document.querySelector("input[type='text']").value = ''
 
         if(genre){
           conexao = `${process.env.REACT_APP_URL_API}/genero/${genre}`
@@ -46,10 +51,13 @@ function App() {
 
       if(movieTitle.includes(e.target[0].value) || originalTitle.includes(e.target[0].value)){
         setErr(10)
+        setAnimation('win')
+        setCongrats('congrats')
         setStatus("Venceu!!!")
         setStreak(streak + 1)
       }else{
         setErr(errCount + 1)
+        setAnimation('err_animation')
         if(errCount === 3){
           setStatus("Perdeu")
           setStreak(0)
@@ -66,8 +74,8 @@ function App() {
 
   return (
     <div className="App">
-      <Menu setGen={setGenero}/>
-      <main>
+      <Menu setGen={setGenero} gen={genero}/>
+      <main className={congrats}>
           <div className="title">
             {status ? movieTitle : "Adivinhe o filme"}
             {status ? <button onClick={() => pegaQuiz()}>Próximo</button> : ''}
@@ -88,7 +96,7 @@ By Web-Mechanic"/>}
             </div>
           </div>
           <div className="frm">
-              <form onSubmit={(e) => verifica(e)}>
+              <form onSubmit={(e) => verifica(e)} className={errAnimation}>
                 <input type="text" required minLength='2'/>
                 <button>Enviar</button>
               </form>

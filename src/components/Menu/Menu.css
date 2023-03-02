@@ -1,19 +1,33 @@
 aside{
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 110px;
     text-align: center;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     background-color: #012340;
     color: white;
 }
+
+aside span:first-child{
+    border-top-left-radius: 15px;
+}
+
+aside span:last-child{
+    border-bottom-left-radius: 15px;
+}
 aside span{
-    margin: 10px 5px;
+    margin: 0px;
+    padding: 12px 4px;
     cursor: pointer;
 }
 
 aside span:hover{
     border-bottom: solid 1px;
 
+}
+
+.ativo{
+    border-bottom: solid 1px;
+    background-color: #03588C;
 }

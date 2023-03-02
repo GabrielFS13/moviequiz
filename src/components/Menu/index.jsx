@@ -1,6 +1,6 @@
 import './Menu.css'
 
-const Menu = ({setGen}) =>{
+const Menu = ({setGen, gen}) =>{
 
     const generos = [
         {
@@ -84,12 +84,13 @@ const Menu = ({setGen}) =>{
             "name": "Faroeste"
         }
     ]
-
+    console.log(gen)
     return(
         <aside className='generos_menu'>
             {generos.map((genero, i) =>{
                 return(
-                    <span key={i} onClick={() => setGen(genero.id)}>{genero.name}</span>
+                    genero.id ? gen === genero.id ? <span key={i} onClick={() => setGen(genero.id)} className="ativo">{genero.name}</span> : <span key={i} onClick={() => setGen(genero.id)}>{genero.name}</span>
+                    : <span key={i} onClick={() => setGen(genero.id)} className="ativo">{genero.name}</span>
                 )
             })}
         </aside>
