@@ -1,21 +1,31 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background:  transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #03588C;
+    border: 2px solid #03588C;
+    margin: 0 5px;
+  }
+
 aside{
+    direction: rtl;
+
     display: flex;
     flex-direction: column;
-    width: 110px;
+    width: 60px;
     text-align: center;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     background-color: #012340;
     color: white;
+    overflow-y: scroll;
 }
 
-aside span:first-child{
-    border-top-left-radius: 15px;
-}
-
-aside span:last-child{
-    border-bottom-left-radius: 15px;
-}
 aside span{
     margin: 0px;
     padding: 12px 4px;
@@ -28,6 +38,5 @@ aside span:hover{
 }
 
 .ativo{
-    border-bottom: solid 1px;
     background-color: #03588C;
 }

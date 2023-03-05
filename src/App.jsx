@@ -15,6 +15,7 @@ function App() {
   const [streak, setStreak] = useState(0)
   const [errAnimation, setAnimation] = useState("")
   const [congrats, setCongrats] = useState('')
+  const [currentGenre, setCurrent] = useState("Aleatório")
 
     function pegaQuiz(genre = false){
         var conexao = ''
@@ -63,6 +64,7 @@ function App() {
           setStreak(0)
         }
       }
+      setTimeout(()=> { setAnimation('')}, 1000)
     }
       useEffect( () =>{
         if(genero){
@@ -74,8 +76,9 @@ function App() {
 
   return (
     <div className="App">
-      <Menu setGen={setGenero} gen={genero}/>
+      <Menu setGen={setGenero} gen={genero} setCur={setCurrent}/>
       <main className={congrats}>
+          <div className="currentGenre">Gênero Atual: {currentGenre}</div>
           <div className="title">
             {status ? movieTitle : "Adivinhe o filme"}
             {status ? <button onClick={() => pegaQuiz()}>Próximo</button> : ''}
@@ -86,9 +89,12 @@ function App() {
 By Web-Mechanic"/>}
             </div>
             <div className="img">
-              {errCount < 4 ? <div className="top_img" /> :<div className="top_img" style={{opacity: 0}}/>}
-              {errCount < 3 ? <div className="bottom_img" /> : <div className="bottom_img" style={{opacity: 0}} />}
+              {errCount < 4 ? <div className="top_img"> <span>?</span></div>  
+              :<div className="top_img" style={{opacity: 0}} /> }
+              {errCount < 3 ? <div className="bottom_img" /> 
+              : <div className="bottom_img" style={{opacity: 0}} />}
               <img src={movieImg} alt={movieTitle} />
+
             </div>
             <div className="dicas">
               <span>{errCount < 1 || status ? '1º Dica, data de lançamento' : hints.release_date}</span>
