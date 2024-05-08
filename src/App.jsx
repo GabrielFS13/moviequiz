@@ -35,7 +35,7 @@ function App() {
         fetch(conexao)
         .then(resp => resp.json())
         .then(infos => {
-          setEmoji(infos.emojis)
+          setEmoji(infos.emojis.message.content)
           setMovie(infos.answer)
           setOriginal(infos.original)
           setHints(infos.hints)
