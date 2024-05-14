@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+<h1 align="center">Movie Quiz com Emojis</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/API-The%20Movie%20DB-red" />
+  <img src="https://img.shields.io/badge/React-17.0.2-blue" />
+  <img src="https://img.shields.io/badge/HTML-5-orange" />
+  <img src="https://img.shields.io/badge/CSS-3-brightgreen" />
+</p>
 
-## Available Scripts
+## Sobre o Projeto
 
-In the project directory, you can run:
+Movie Quiz com Emojis é um jogo divertido onde o jogador deve adivinhar o título de um filme com base em emojis que representam palavras-chave do título. O jogo utiliza a API do MovieDB para 
+obter uma lista de filmes e transformar o título do filme em uma sequência de emojis com a ajuda de uma I.A., desafiando o jogador a decifrar.
 
-### `npm start`
+O jogador tem 4 tentativas para adivinhar o título correto do filme. A cada erro, uma dica é revelada, aumentando as chances do jogador de acertar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Além disso, o jogador tem a opção de escolher jogar com gêneros aleatórios ou gêneros específicos, tornando a experiência ainda mais personalizada e desafiadora.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Funcionalidades
 
-### `npm test`
+- Adivinhe o título do filme com base em emojis
+- 4 tentativas para acertar o título do filme
+- Dicas reveladas a cada erro para ajudar o jogador
+- Escolha jogar com gêneros aleatórios ou específicos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como Jogar
 
-### `npm run build`
+1. Clone este repositório:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/seu-usuario/moviequiz.git
+npm install
+npm start
+```
