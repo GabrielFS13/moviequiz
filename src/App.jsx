@@ -49,8 +49,8 @@ function App() {
     
     function verifica(e){
       e.preventDefault()
-
-      if(movieTitle.includes(e.target[0].value) || originalTitle.includes(e.target[0].value)){
+      const answer = e.target[0].value
+      if(movieTitle.toLocaleLowerCase().includes(answer) || originalTitle.toLocaleLowerCase().includes(answer)){
         setErr(10)
         setAnimation('win')
         setCongrats('congrats')
